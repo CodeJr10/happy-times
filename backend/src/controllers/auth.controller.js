@@ -59,13 +59,13 @@ export const login = async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      res.status(400).json({ message: "invalid creds" });
+      return res.status(400).json({ message: "invalid creds" });
     }
 
     const isPassword = await bcrypt.compare(password, user.password);
 
     if (!isPassword) {
-      res.status(400).json({ message: "Invalid creds" });
+      return res.status(400).json({ message: "Invalid creds" });
     }
 
     generateToken(user._id, res);
@@ -76,9 +76,10 @@ export const login = async (req, res) => {
       email: user.email,
       profilePic: user.profilePic,
     });
+    return;
   } catch (error) {
     console.log("Error in controller", error.message);
-    res.status(500).json({ message: "Internal server error" });
+    return res.status(500).json({ message: "Internal server error" });
   }
 };
 
