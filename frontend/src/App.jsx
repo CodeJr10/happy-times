@@ -10,7 +10,7 @@ import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage";
 import SignUpPage from "./pages/SignUpPage";
 import { Toaster } from "react-hot-toast";
-import { useAuthStore } from "./store/userAuthStore";
+import { useAuthStore } from "./store/useAuthStore";
 import { useEffect } from "react";
 
 const App = () => {
