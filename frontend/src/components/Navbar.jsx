@@ -7,6 +7,7 @@ const Navbar = () => {
   const { logout, authUser } = useAuthStore();
 
   return (
+    //Logo
     <header
       className="bg-base-100 border-b border-base-300 fixed w-full top-0 z-40 
     backdrop-blur-lg bg-base-100/80"
@@ -24,7 +25,9 @@ const Navbar = () => {
               <h1 className="text-lg font-bold">Chat</h1>
             </Link>
           </div>
+          {/* Logout */}
 
+          {/* Settings */}
           <div className="flex items-center gap-2">
             <Link
               to={"/settings"}
@@ -37,6 +40,7 @@ const Navbar = () => {
               <span className="hidden sm:inline">Settings</span>
             </Link>
 
+            {/* Only render profile & logout options if authUser is true i.e user is logged in */}
             {authUser && (
               <>
                 <Link to={"/profile"} className={`btn btn-sm gap-2`}>
