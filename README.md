@@ -40,10 +40,11 @@ Before running the application, make sure you have the following installed:
 - npm or yarn
 - MongoDB
 
-### Setup
+### Set up environment variables
 
-.env file:
+Create a `.env` file in the backend folder of the project and add the following variables:
 
+```env
 MONGODB_URI=...
 PORT=5001
 JWT_SECRET=...
@@ -53,4 +54,3 @@ CLOUDINARY_API_KEY=...
 CLOUDINARY_API_SECRET=...
 
 NODE_ENV=development
-
