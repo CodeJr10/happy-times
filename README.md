@@ -40,11 +40,17 @@ Before running the application, make sure you have the following installed:
 - npm or yarn
 - MongoDB
 
-### Installation
+### Setup
 
-1. Clone the repository:
+.env file:
 
-```bash
-git clone https://github.com/your-username/happy-times.git
+MONGODB_URI=...
+PORT=5001
+JWT_SECRET=...
 
+CLOUDINARY_CLOUD_NAME=...
+CLOUDINARY_API_KEY=...
+CLOUDINARY_API_SECRET=...
+
+NODE_ENV=development
 
